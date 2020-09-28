@@ -1,0 +1,61 @@
+birads
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[birads] (*<-lang_ru;;*);
+    	[birads] (*<-lang_en;;*);;
+
+0
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[0] (*<-lang_ru;;*);
+    	[0] (*<-lang_en;;*);;
+
+birads->0;;
+
+1
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[1] (*<-lang_ru;;*);
+    	[1] (*<-lang_en;;*);;
+
+birads->1;;
+
+2
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[2] (*<-lang_ru;;*);
+    	[2] (*<-lang_en;;*);;
+
+birads->2;;
+
+3
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[3] (*<-lang_ru;;*);
+    	[3] (*<-lang_en;;*);;
+
+birads->3;;
+
+4
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[4] (*<-lang_ru;;*);
+    	[4] (*<-lang_en;;*);;
+
+birads->4;;
+
+5
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[5] (*<-lang_ru;;*);
+    	[5] (*<-lang_en;;*);;
+
+birads->5;;
+
+6
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[6] (*<-lang_ru;;*);
+    	[6] (*<-lang_en;;*);;
+
+birads->6;;

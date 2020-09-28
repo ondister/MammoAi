@@ -1,0 +1,34 @@
+dens_type
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[тип плотности] (*<-lang_ru;;*);
+    	[dens type] (*<-lang_en;;*);;
+
+a
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[a] (*<-lang_ru;;*);
+    	[a] (*<-lang_en;;*);;
+
+b
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[в] (*<-lang_ru;;*);
+    	[b] (*<-lang_en;;*);;
+
+c
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[с] (*<-lang_ru;;*);
+    	[c] (*<-lang_en;;*);;
+
+d
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[д] (*<-lang_ru;;*);
+    	[d] (*<-lang_en;;*);;
+
+dens_type->a;;
+dens_type->b;;
+dens_type->c;;
+dens_type->d;;

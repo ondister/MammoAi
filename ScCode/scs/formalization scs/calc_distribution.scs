@@ -1,0 +1,45 @@
+calc_distribution
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[распределение кальцинатов] (*<-lang_ru;;*);
+    	[calc_distribution] (*<-lang_en;;*);;
+
+diffuse
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[диффузное] (*<-lang_ru;;*);
+    	[diffuse] (*<-lang_en;;*);;
+
+calc_distribution->diffuse;;
+
+regional
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[регионарное] (*<-lang_ru;;*);
+    	[regional] (*<-lang_en;;*);;
+
+calc_distribution->regional;;
+
+grouped
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[сгрупированное] (*<-lang_ru;;*);
+    	[grouped] (*<-lang_en;;*);;
+
+calc_distribution->grouped;;
+
+linear
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[линейное] (*<-lang_ru;;*);
+    	[linear] (*<-lang_en;;*);;
+
+calc_distribution->linear;;
+
+segmental
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[сегментарное] (*<-lang_ru;;*);
+    	[segmental] (*<-lang_en;;*);;
+
+calc_distribution->segmental;;

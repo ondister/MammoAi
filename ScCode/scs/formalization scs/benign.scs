@@ -1,0 +1,77 @@
+benign
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[доброкачественные кальцинаты] (*<-lang_ru;;*);
+    	[benign] (*<-lang_en;;*);;
+
+skin
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[кожные] (*<-lang_ru;;*);
+    	[skin] (*<-lang_en;;*);;
+
+benign->skin;;
+
+vascular
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[сосудистые] (*<-lang_ru;;*);
+    	[vascular] (*<-lang_en;;*);;
+
+benign->vascular;;
+
+popcorn
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[глыбчатые] (*<-lang_ru;;*);
+    	[popcorn] (*<-lang_en;;*);;
+
+benign->popcorn;;
+
+roadlike
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[продолговатые] (*<-lang_ru;;*);
+    	[roadlike] (*<-lang_en;;*);;
+
+benign->roadlike;;
+
+round
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[круглые] (*<-lang_ru;;*);
+    	[round] (*<-lang_en;;*);;
+
+benign->round;;
+
+rim
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[полулунные] (*<-lang_ru;;*);
+    	[rim] (*<-lang_en;;*);;
+
+benign->rim;;
+
+dystrophic
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[дистрофические] (*<-lang_ru;;*);
+    	[dystrophic] (*<-lang_en;;*);;
+
+benign->dystrophic;;
+
+milk
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[молочные] (*<-lang_ru;;*);
+    	[milk] (*<-lang_en;;*);;
+
+benign->milk;;
+
+suture
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[шовные] (*<-lang_ru;;*);
+    	[suture] (*<-lang_en;;*);;
+
+benign->suture;;
