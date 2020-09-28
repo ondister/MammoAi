@@ -1,0 +1,11 @@
+adani
+=> nrel_main_idtf: 
+	[адани] 
+	(* 
+	<- lang_ru;; 
+	*);
+=> nrel_main_idtf: 
+	[adani] 
+	(* 
+	<- lang_en;; 
+	*);;
