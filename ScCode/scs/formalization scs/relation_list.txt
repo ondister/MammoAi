@@ -1,0 +1,16 @@
+age
+patient_hormonal_status
+patients_study
+image
+metadata_of_image
+height_of_image
+width_of_image
+projection
+laterality
+pixel_data_of_image
+dens_type
+spatial_artefacts
+wkt_text_of_artifact
+quadrant_of_artifact
+shape_of_mass
+margins_of_mass

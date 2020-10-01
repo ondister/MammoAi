@@ -1,0 +1,70 @@
+artifact_type ->
+	mass
+	calc
+	dist
+	asym
+	lnode
+	skin_l
+	dilduct
+	skin_retraction
+	nipple_retraction
+	skin_thickening
+	trabs
+	adenopathy
+	nipple
+	implant
+benign->
+	skin
+	vascular
+	popcorn
+	roadlike
+	round
+	rim
+	dystrophic
+	milk
+	suture
+calc_distribution->
+	diffuse
+	regional
+	grouped
+	linear
+	segmental
+birads->
+	0
+	1
+	2
+	3
+	4
+	4a
+	4b
+	4c
+	5
+	6
+dens_type->
+	a
+	b
+	c
+	d
+feature->
+	false
+	true
+mass_density->
+	high
+	equal
+	low
+	fat
+mass_margins->
+	circumscribed
+	microlobulated
+	obscured
+	indistinct
+	spiculated
+mass_shape->
+	round
+	oval
+	irregular
+suspicious->
+	amorphous
+	coarse
+	pleomorphic
+	linear
