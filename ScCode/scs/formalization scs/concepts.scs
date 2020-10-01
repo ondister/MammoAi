@@ -1,0 +1,62 @@
+age_string
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[строка возраста] (*<-lang_ru;;*);
+    	[age string] (*<-lang_en;;*);;
+
+patient
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[пациент] (*<-lang_ru;;*);
+    	[patient] (*<-lang_en;;*);;
+
+study
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[исследование] (*<-lang_ru;;*);
+    	[study] (*<-lang_en;;*);;
+
+medical_image
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[медицинское изображение] (*<-lang_ru;;*);
+    	[medical image] (*<-lang_en;;*);;
+
+metadata
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[метаданные] (*<-lang_ru;;*);
+    	[metadata] (*<-lang_en;;*);;
+
+image_URI
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[image_URI] (*<-lang_ru;;*);
+    	[image_URI] (*<-lang_en;;*);;
+
+laterality_artefacts
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[laterality_artefacts] (*<-lang_ru;;*);
+    	[laterality_artefacts] (*<-lang_en;;*);;
+
+spatial_artefacts
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[spatial_artefacts] (*<-lang_ru;;*);
+    	[spatial_artefacts] (*<-lang_en;;*);;
+
+laterality_dens_type
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[тип плотности латеральности] (*<-lang_ru;;*);
+    	[laterality_dens_type] (*<-lang_en;;*);;
+
+wkt_text
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[wkt текст] (*<-lang_ru;;*);
+    	[wkt_text] (*<-lang_en;;*);;
+
+
+

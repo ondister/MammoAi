@@ -1,0 +1,58 @@
+hormonal_status
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[гормональный статус] (*<-lang_ru;;*);
+    	[hormonal_status] (*<-lang_en;;*);;
+
+menopause
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[менопауза] (*<-lang_ru;;*);
+    	[menopause] (*<-lang_en;;*);;
+
+hormonal_status->menopause;;
+
+projection
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[проекция] (*<-lang_ru;;*);
+    	[projection] (*<-lang_en;;*);;
+
+MLO
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[MLO] (*<-lang_ru;;*);
+    	[MLO] (*<-lang_en;;*);;
+
+projection->MLO;;
+
+CC
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[CC] (*<-lang_ru;;*);
+    	[CC] (*<-lang_en;;*);;
+
+projection->CC;;
+
+laterality
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[латеральность] (*<-lang_ru;;*);
+    	[laterality] (*<-lang_en;;*);;
+
+right_laterality
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[правая латеральность] (*<-lang_ru;;*);
+    	[right_laterality] (*<-lang_en;;*);;
+
+laterality->right_laterality;;
+
+left_laterality
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[левая латеральность] (*<-lang_ru;;*);
+    	[left_laterality] (*<-lang_en;;*);;
+
+laterality->left_laterality;;
+

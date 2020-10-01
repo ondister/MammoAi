@@ -68,3 +68,19 @@ suspicious->
 	coarse
 	pleomorphic
 	linear
+hormonal_status->
+	menopause
+projection->
+	MLO
+	CC
+laterality->
+	left_laterality
+	right_laterality
+age_string
+patient
+study
+medical_image
+metadata
+image_URI
+spatial_artefacts
+laterality_artefacts
