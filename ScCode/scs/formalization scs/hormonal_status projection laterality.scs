@@ -12,6 +12,15 @@ menopause
 
 hormonal_status->menopause;;
 
+active_hormonal_status
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[активный гормональный статус] (*<-lang_ru;;*);
+    	[active_hormonal_status] (*<-lang_en;;*);;
+
+hormonal_status->active_hormonal_status;;
+
+
 projection
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
@@ -55,4 +64,3 @@ left_laterality
     	[left_laterality] (*<-lang_en;;*);;
 
 laterality->left_laterality;;
-

@@ -55,13 +55,13 @@ laterality
 pixel_data_of_image
 	<-sc_node_norole_relation;
 	=>nrel_main_idtf:
-		[?????????*] (*<-lang_ru;;*);
+		[массив пикселей*] (*<-lang_ru;;*);
     	[pixel data of image*] (*<-lang_en;;*);;
 
 laterality_artefacts
 	<-sc_node_norole_relation;
 	=>nrel_main_idtf:
-		[?????????*] (*<-lang_ru;;*);
+		[артефакты латеральности*] (*<-lang_ru;;*);
     	[pixel data of image*] (*<-lang_en;;*);;
 
 dens_type
@@ -73,7 +73,7 @@ dens_type
 spatial_artefacts
 	<-sc_node_norole_relation;
 	=>nrel_main_idtf:
-		[?????????*] (*<-lang_ru;;*);
+		[геометрические артефакты*] (*<-lang_ru;;*);
     	[spatial artefacts*] (*<-lang_en;;*);;
 
 nipple_distination

@@ -70,6 +70,7 @@ suspicious->
 	linear
 hormonal_status->
 	menopause
+	active_hormonal_status
 projection->
 	MLO
 	CC

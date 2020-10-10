@@ -31,19 +31,19 @@ metadata
 image_URI
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
-		[image_URI] (*<-lang_ru;;*);
+		[уникальный идентификатор изображения] (*<-lang_ru;;*);
     	[image_URI] (*<-lang_en;;*);;
 
 laterality_artefacts
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
-		[laterality_artefacts] (*<-lang_ru;;*);
+		[артефакты латеральности] (*<-lang_ru;;*);
     	[laterality_artefacts] (*<-lang_en;;*);;
 
 spatial_artefacts
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
-		[spatial_artefacts] (*<-lang_ru;;*);
+		[геометрические артефакты] (*<-lang_ru;;*);
     	[spatial_artefacts] (*<-lang_en;;*);;
 
 laterality_dens_type
