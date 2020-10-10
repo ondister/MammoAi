@@ -105,3 +105,10 @@ margins_of_mass
 	=>nrel_main_idtf:
 		[границы образования*] (*<-lang_ru;;*);
     	[margins of mass*] (*<-lang_en;;*);;
+
+
+			uio_of_study
+				<-sc_node_norole_relation;
+				=>nrel_main_idtf:
+					[уникальный идентификатор исследования*] (*<-lang_ru;;*);
+			    	[uio of study*] (*<-lang_en;;*);;

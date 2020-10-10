@@ -59,4 +59,8 @@ wkt_text
     	[wkt_text] (*<-lang_en;;*);;
 
 
-
+		 study_uio
+				<-sc_node_not_relation;
+				=>nrel_main_idtf:
+					[уникальный идентификатор исследования] (*<-lang_ru;;*);
+			    	[study_uio] (*<-lang_en;;*);;

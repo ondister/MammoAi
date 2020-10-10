@@ -84,3 +84,4 @@ metadata
 image_URI
 spatial_artefacts
 laterality_artefacts
+study_uio
