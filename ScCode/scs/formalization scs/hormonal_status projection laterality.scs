@@ -64,3 +64,26 @@ concept_left_laterality
     	[left laterality] (*<-lang_en;;*);;
 
 concept_laterality->concept_left_laterality;;
+
+
+concept_quadrant
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[квадрант] (*<-lang_ru;;*);
+    	[quadrant] (*<-lang_en;;*);;
+
+concept_outer_quadrant
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[наружный квадрант] (*<-lang_ru;;*);
+    	[outer quadrant] (*<-lang_en;;*);;
+
+concept_quadrant->concept_menopause;;
+
+concept_inner_quadrant
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[внутренний квадрант] (*<-lang_ru;;*);
+    	[inner quadrant] (*<-lang_en;;*);;
+
+concept_quadrant->concept_inner_quadrant;;
