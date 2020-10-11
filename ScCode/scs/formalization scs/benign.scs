@@ -1,77 +1,77 @@
-benign
+concept_benign
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[доброкачественные кальцинаты] (*<-lang_ru;;*);
     	[benign] (*<-lang_en;;*);;
 
-skin
+concept_skin
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[кожные] (*<-lang_ru;;*);
     	[skin] (*<-lang_en;;*);;
 
-benign->skin;;
+concept_benign->concept_skin;;
 
-vascular
+concept_vascular
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[сосудистые] (*<-lang_ru;;*);
     	[vascular] (*<-lang_en;;*);;
 
-benign->vascular;;
+concept_benign->concept_vascular;;
 
-popcorn
+concept_popcorn
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[глыбчатые] (*<-lang_ru;;*);
     	[popcorn] (*<-lang_en;;*);;
 
-benign->popcorn;;
+concept_benign->concept_popcorn;;
 
-roadlike
+concept_roadlike
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[продолговатые] (*<-lang_ru;;*);
     	[roadlike] (*<-lang_en;;*);;
 
-benign->roadlike;;
+concept_benign->concept_roadlike;;
 
-round
+concept_round
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[круглые] (*<-lang_ru;;*);
     	[round] (*<-lang_en;;*);;
 
-benign->round;;
+concept_benign->concept_round;;
 
-rim
+concept_rim
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[полулунные] (*<-lang_ru;;*);
     	[rim] (*<-lang_en;;*);;
 
-benign->rim;;
+concept_benign->concept_rim;;
 
-dystrophic
+concept_dystrophic
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[дистрофические] (*<-lang_ru;;*);
     	[dystrophic] (*<-lang_en;;*);;
 
-benign->dystrophic;;
+concept_benign->concept_dystrophic;;
 
-milk
+concept_milk
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[молочные] (*<-lang_ru;;*);
     	[milk] (*<-lang_en;;*);;
 
-benign->milk;;
+concept_benign->concept_milk;;
 
-suture
+concept_suture
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[шовные] (*<-lang_ru;;*);
     	[suture] (*<-lang_en;;*);;
 
-benign->suture;;
+concept_benign->concept_suture;;

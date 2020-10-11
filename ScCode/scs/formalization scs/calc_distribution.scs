@@ -1,45 +1,45 @@
-calc_distribution
+concept_calc_distribution
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[распределение кальцинатов] (*<-lang_ru;;*);
     	[calc_distribution] (*<-lang_en;;*);;
 
-diffuse
+concept_diffuse
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[диффузное] (*<-lang_ru;;*);
     	[diffuse] (*<-lang_en;;*);;
 
-calc_distribution->diffuse;;
+concept_calc_distribution->concept_diffuse;;
 
-regional
+concept_regional
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[регионарное] (*<-lang_ru;;*);
     	[regional] (*<-lang_en;;*);;
 
-calc_distribution->regional;;
+concept_calc_distribution->concept_regional;;
 
-grouped
+concept_grouped
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[сгрупированное] (*<-lang_ru;;*);
     	[grouped] (*<-lang_en;;*);;
 
-calc_distribution->grouped;;
+concept_calc_distribution->concept_grouped;;
 
-linear
+concept_linear
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[линейное] (*<-lang_ru;;*);
     	[linear] (*<-lang_en;;*);;
 
-calc_distribution->linear;;
+concept_calc_distribution->concept_linear;;
 
-segmental
+concept_segmental
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[сегментарное] (*<-lang_ru;;*);
     	[segmental] (*<-lang_en;;*);;
 
-calc_distribution->segmental;;
+concept_calc_distribution->concept_segmental;;

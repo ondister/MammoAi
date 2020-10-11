@@ -1,21 +1,21 @@
-feature
+concept_feature
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[злокачественные кальцинаты] (*<-lang_ru;;*);
     	[feature] (*<-lang_en;;*);;
 
-false
+concept_false
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[нет] (*<-lang_ru;;*);
     	[false] (*<-lang_en;;*);;
 
-feature->false;;
+concept_feature->concept_false;;
 
-true
+concept_true
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[да] (*<-lang_ru;;*);
     	[true] (*<-lang_en;;*);;
 
-feature->true;;
+concept_feature->concept_true;;

@@ -1,117 +1,117 @@
-artifact
+concept_artifact
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[тип артефакта] (*<-lang_ru;;*);
     	[artifact_type] (*<-lang_en;;*);;
 
-mass
+concept_mass
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[образование] (*<-lang_ru;;*);
     	[mass] (*<-lang_en;;*);;
 
-artifact->mass;;
+concept_artifact->concept_mass;;
 
-calc
+concept_calc
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[кальцинат] (*<-lang_ru;;*);
     	[calc] (*<-lang_en;;*);;
 
-artifact->calc;;
+concept_artifact->concept_calc;;
 
-dist
+concept_dist
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[нарушение] (*<-lang_ru;;*);
     	[dist] (*<-lang_en;;*);;
 
-artifact->dist;;
+concept_artifact->concept_dist;;
 
-asym
+concept_asym
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[ассиметрия] (*<-lang_ru;;*);
     	[asym] (*<-lang_en;;*);;
 
-artifact->asym;;
+concept_artifact->concept_asym;;
 
-lnode
+concept_lnode
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[лимфоузел] (*<-lang_ru;;*);
     	[lnode] (*<-lang_en;;*);;
 
-artifact->lnode;;
+concept_artifact->concept_lnode;;
 
-skin_l
+concept_skin_l
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[поражение_кожи] (*<-lang_ru;;*);
     	[skin_l] (*<-lang_en;;*);;
 
-artifact->skin_l;;
+concept_artifact->concept_skin_l;;
 
-dilduct
+concept_dilduct
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[проток] (*<-lang_ru;;*);
     	[dilduct] (*<-lang_en;;*);;
 
-artifact->dilduct;;
+concept_artifact->concept_dilduct;;
 
-skin_retraction
+concept_skin_retraction
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[втяжение кожи] (*<-lang_ru;;*);
     	[skin_retraction] (*<-lang_en;;*);;
 
-artifact->skin_retraction;;
+concept_artifact->concept_skin_retraction;;
 
-nipple_retraction
+concept_nipple_retraction
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[втяжение соска] (*<-lang_ru;;*);
     	[nipple_retraction] (*<-lang_en;;*);;
 
-artifact->nipple_retraction;;
+concept_artifact->concept_nipple_retraction;;
 
-skin_thickening
+concept_skin_thickening
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[утолщение кожи] (*<-lang_ru;;*);
     	[skin_thickening] (*<-lang_en;;*);;
 
-artifact->skin_thickening;;
+concept_artifact->concept_skin_thickening;;
 
-trabs
+concept_trabs
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[утолщение трабекул] (*<-lang_ru;;*);
     	[trabs] (*<-lang_en;;*);;
 
-artifact->trabs;;
+concept_artifact->concept_trabs;;
 
-adenopathy
+concept_adenopathy
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[лимфоаденопатия] (*<-lang_ru;;*);
     	[adenopathy] (*<-lang_en;;*);;
 
-artifact->adenopathy;;
+concept_artifact->concept_adenopathy;;
 
-nipple
+concept_nipple
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[сосок] (*<-lang_ru;;*);
     	[nipple] (*<-lang_en;;*);;
 
-artifact->nipple;;
+concept_artifact->concept_nipple;;
 
-implant
+concept_implant
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[имплант] (*<-lang_ru;;*);
     	[implant] (*<-lang_en;;*);;
 
-artifact->implant;;
+concept_artifact->concept_implant;;

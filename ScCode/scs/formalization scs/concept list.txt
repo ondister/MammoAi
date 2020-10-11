@@ -1,88 +1,88 @@
-artifact_type ->
-	mass
-	calc
-	dist
-	asym
-	lnode
-	skin_l
-	dilduct
-	skin_retraction
-	nipple_retraction
-	skin_thickening
-	trabs
-	adenopathy
-	nipple
-	implant
-benign->
-	skin
-	vascular
-	popcorn
-	roadlike
-	round
-	rim
-	dystrophic
-	milk
-	suture
-calc_distribution->
-	diffuse
-	regional
-	grouped
-	linear
-	segmental
-birads->
-	0
-	1
-	2
-	3
-	4
-	4a
-	4b
-	4c
-	5
-	6
-dens_type->
-	a
-	b
-	c
-	d
-feature->
-	false
-	true
-mass_density->
-	high
-	equal
-	low
-	fat
-mass_margins->
-	circumscribed
-	microlobulated
-	obscured
-	indistinct
-	spiculated
-mass_shape->
-	round
-	oval
-	irregular
-suspicious->
-	amorphous
-	coarse
-	pleomorphic
-	linear
-hormonal_status->
-	menopause
-	active_hormonal_status
-projection->
-	MLO
-	CC
-laterality->
-	left_laterality
-	right_laterality
-age_string
-patient
-study
-medical_image
-metadata
-image_URI
-spatial_artefacts
-laterality_artefacts
-study_uio
+concept_artifact_type ->
+	concept_mass
+	concept_calc
+	concept_dist
+	concept_asym
+	concept_lnode
+	concept_skin_l
+	concept_dilduct
+	concept_skin_retraction
+	concept_nipple_retraction
+	concept_skin_thickening
+	concept_trabs
+	concept_adenopathy
+	concept_nipple
+	concept_implant
+concept_benign->
+	concept_skin
+	concept_vascular
+	concept_popcorn
+	concept_roadlike
+	concept_round
+	concept_rim
+	concept_dystrophic
+	concept_milk
+	concept_suture
+concept_calc_distribution->
+	concept_diffuse
+	concept_regional
+	concept_grouped
+	concept_linear
+	concept_segmental
+concept_birads->
+	concept_0
+	concept_1
+	concept_2
+	concept_3
+	concept_4
+	concept_4a
+	concept_4b
+	concept_4c
+	concept_5
+	concept_6
+concept_dens_type->
+	concept_a
+	concept_b
+	concept_c
+	concept_d
+concept_feature->
+	concept_false
+	concept_true
+concept_mass_density->
+	concept_high
+	concept_equal
+	concept_low
+	concept_fat
+concept_mass_margins->
+	concept_circumscribed
+	concept_microlobulated
+	concept_obscured
+	concept_indistinct
+	concept_spiculated
+concept_mass_shape->
+	concept_round
+	concept_oval
+	concept_irregular
+concept_suspicious->
+	concept_amorphous
+	concept_coarse
+	concept_pleomorphic
+	concept_linear
+concept_hormonal_status->
+	concept_menopause
+	concept_active_hormonal_status
+concept_projection->
+	concept_MLO
+	concept_CC
+concept_laterality->
+	concept_left_laterality
+	concept_right_laterality
+concept_age_string
+concept_patient
+concept_study
+concept_medical_image
+concept_metadata
+concept_image_URI
+concept_spatial_artefacts
+concept_laterality_artefacts
+concept_study_uio

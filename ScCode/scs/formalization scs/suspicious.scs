@@ -1,38 +1,37 @@
-suspicious
+concept_suspicious
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[злокачественные кальцинаты] (*<-lang_ru;;*);
     	[suspicious] (*<-lang_en;;*);;
 
-amorphous
+concept_amorphous
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[аморфные] (*<-lang_ru;;*);
     	[amorphous] (*<-lang_en;;*);;
 
-suspicious->amorphous;;
+concept_suspicious->concept_amorphous;;
 
-coarse
+concept_coarse
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[полиморфные] (*<-lang_ru;;*);
     	[coarse] (*<-lang_en;;*);;
 
-suspicious->coarse;;
+concept_suspicious->concept_coarse;;
 
-pleomorphic
+concept_pleomorphic
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[неравномерные] (*<-lang_ru;;*);
     	[pleomorphic] (*<-lang_en;;*);;
 
-suspicious->pleomorphic;;
+concept_suspicious->concept_pleomorphic;;
 
-linear
+concept_linear
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[линейные] (*<-lang_ru;;*);
     	[linear] (*<-lang_en;;*);;
 
-suspicious->linear;;
-
+concept_suspicious->concept_linear;;

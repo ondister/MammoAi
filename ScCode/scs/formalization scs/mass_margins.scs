@@ -1,45 +1,45 @@
-mass_margins
+concept_mass_margins
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[края образования] (*<-lang_ru;;*);
     	[mass_margins] (*<-lang_en;;*);;
 
-circumscribed
+concept_circumscribed
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[ровные] (*<-lang_ru;;*);
     	[circumscribed] (*<-lang_en;;*);;
 
-mass_margins->circumscribed;;
+concept_mass_margins->concept_circumscribed;;
 
-microlobulated
+concept_microlobulated
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[мелкобугристые] (*<-lang_ru;;*);
     	[microlobulated] (*<-lang_en;;*);;
 
-mass_margins->microlobulated;;
+concept_mass_margins->concept_microlobulated;;
 
-obscured
+concept_obscured
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[скрытые] (*<-lang_ru;;*);
     	[obscured] (*<-lang_en;;*);;
 
-mass_margins->obscured;;
+concept_mass_margins->concept_obscured;;
 
-indistinct
+concept_indistinct
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[нечеткие] (*<-lang_ru;;*);
     	[indistinct] (*<-lang_en;;*);;
 
-mass_margins->indistinct;;
+concept_mass_margins->concept_indistinct;;
 
-spiculated
+concept_spiculated
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[лучистые] (*<-lang_ru;;*);
     	[spiculated] (*<-lang_en;;*);;
 
-mass_margins->spiculated;;
+concept_mass_margins->concept_spiculated;;
