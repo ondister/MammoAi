@@ -115,3 +115,11 @@ concept_implant
     	[implant] (*<-lang_en;;*);;
 
 concept_artifact->concept_implant;;
+
+concept_skin_papilloma
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[кожная папиллома] (*<-lang_ru;;*);
+    	[skin papilloma] (*<-lang_en;;*);;
+
+concept_artifact->concept_skin_papilloma;;
