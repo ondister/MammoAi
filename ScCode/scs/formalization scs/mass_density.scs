@@ -2,7 +2,7 @@ concept_mass_density
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[плотность образования] (*<-lang_ru;;*);
-    	[mass_density] (*<-lang_en;;*);;
+    	[mass density] (*<-lang_en;;*);;
 
 concept_high
 	<-sc_node_not_relation;

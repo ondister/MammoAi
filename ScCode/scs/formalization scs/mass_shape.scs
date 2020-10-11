@@ -2,7 +2,7 @@ concept_mass_shape
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[форма образования] (*<-lang_ru;;*);
-    	[mass_shape] (*<-lang_en;;*);;
+    	[mass shape] (*<-lang_en;;*);;
 
 concept_round
 	<-sc_node_not_relation;

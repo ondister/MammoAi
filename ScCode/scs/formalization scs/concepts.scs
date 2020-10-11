@@ -32,35 +32,35 @@ concept_image_URI
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[уникальный идентификатор изображения] (*<-lang_ru;;*);
-    	[image_URI] (*<-lang_en;;*);;
+    	[image URI] (*<-lang_en;;*);;
 
 concept_laterality_artefacts
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[артефакты латеральности] (*<-lang_ru;;*);
-    	[laterality_artefacts] (*<-lang_en;;*);;
+    	[laterality artefacts] (*<-lang_en;;*);;
 
 concept_spatial_artefacts
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[геометрические артефакты] (*<-lang_ru;;*);
-    	[spatial_artefacts] (*<-lang_en;;*);;
+    	[spatial artefacts] (*<-lang_en;;*);;
 
 concept_laterality_dens_type
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[тип плотности латеральности] (*<-lang_ru;;*);
-    	[laterality_dens_type] (*<-lang_en;;*);;
+    	[laterality dens type] (*<-lang_en;;*);;
 
 concept_wkt_text
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[wkt текст] (*<-lang_ru;;*);
-    	[wkt_text] (*<-lang_en;;*);;
+    	[wkt text] (*<-lang_en;;*);;
 
 
 		 concept_study_uio
 				<-sc_node_not_relation;
 				=>nrel_main_idtf:
 					[уникальный идентификатор исследования] (*<-lang_ru;;*);
-			    	[study_uio] (*<-lang_en;;*);;
+			    	[study uio] (*<-lang_en;;*);;

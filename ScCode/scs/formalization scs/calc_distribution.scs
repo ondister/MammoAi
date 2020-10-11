@@ -2,7 +2,7 @@ concept_calc_distribution
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[распределение кальцинатов] (*<-lang_ru;;*);
-    	[calc_distribution] (*<-lang_en;;*);;
+    	[calc distribution] (*<-lang_en;;*);;
 
 concept_diffuse
 	<-sc_node_not_relation;

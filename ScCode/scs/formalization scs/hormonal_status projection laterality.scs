@@ -2,7 +2,7 @@ concept_hormonal_status
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[гормональный статус] (*<-lang_ru;;*);
-    	[hormonal_status] (*<-lang_en;;*);;
+    	[hormonal status] (*<-lang_en;;*);;
 
 concept_menopause
 	<-sc_node_not_relation;
@@ -16,7 +16,7 @@ concept_active_hormonal_status
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[активный гормональный статус] (*<-lang_ru;;*);
-    	[active_hormonal_status] (*<-lang_en;;*);;
+    	[active hormonal status] (*<-lang_en;;*);;
 
 concept_hormonal_status->concept_active_hormonal_status;;
 
@@ -53,7 +53,7 @@ concept_right_laterality
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[правая латеральность] (*<-lang_ru;;*);
-    	[right_laterality] (*<-lang_en;;*);;
+    	[right laterality] (*<-lang_en;;*);;
 
 concept_laterality->concept_right_laterality;;
 
@@ -61,6 +61,6 @@ concept_left_laterality
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[левая латеральность] (*<-lang_ru;;*);
-    	[left_laterality] (*<-lang_en;;*);;
+    	[left laterality] (*<-lang_en;;*);;
 
 concept_laterality->concept_left_laterality;;

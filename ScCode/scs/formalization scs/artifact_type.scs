@@ -2,7 +2,7 @@ concept_artifact
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[тип артефакта] (*<-lang_ru;;*);
-    	[artifact_type] (*<-lang_en;;*);;
+    	[artifact type] (*<-lang_en;;*);;
 
 concept_mass
 	<-sc_node_not_relation;
@@ -48,7 +48,7 @@ concept_skin_l
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[поражение_кожи] (*<-lang_ru;;*);
-    	[skin_l] (*<-lang_en;;*);;
+    	[skin l] (*<-lang_en;;*);;
 
 concept_artifact->concept_skin_l;;
 
@@ -64,7 +64,7 @@ concept_skin_retraction
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[втяжение кожи] (*<-lang_ru;;*);
-    	[skin_retraction] (*<-lang_en;;*);;
+    	[skin retraction] (*<-lang_en;;*);;
 
 concept_artifact->concept_skin_retraction;;
 
@@ -72,7 +72,7 @@ concept_nipple_retraction
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[втяжение соска] (*<-lang_ru;;*);
-    	[nipple_retraction] (*<-lang_en;;*);;
+    	[nipple retraction] (*<-lang_en;;*);;
 
 concept_artifact->concept_nipple_retraction;;
 
@@ -80,7 +80,7 @@ concept_skin_thickening
 	<-sc_node_not_relation;
 	=>nrel_main_idtf:
 		[утолщение кожи] (*<-lang_ru;;*);
-    	[skin_thickening] (*<-lang_en;;*);;
+    	[skin thickening] (*<-lang_en;;*);;
 
 concept_artifact->concept_skin_thickening;;
 
