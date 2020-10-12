@@ -85,4 +85,4 @@ concept_metadata
 concept_image_URI
 concept_spatial_artefacts
 concept_laterality_artefacts
-concept_study_uio
+concept_study_uid

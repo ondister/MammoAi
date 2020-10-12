@@ -59,8 +59,8 @@ concept_wkt_text
     	[wkt text] (*<-lang_en;;*);;
 
 
-		 concept_study_uio
+		 concept_study_uid
 				<-sc_node_not_relation;
 				=>nrel_main_idtf:
 					[уникальный идентификатор исследования] (*<-lang_ru;;*);
-			    	[study uio] (*<-lang_en;;*);;
+			    	[study uid] (*<-lang_en;;*);;
