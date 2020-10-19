@@ -1,0 +1,97 @@
+concept_age_group->concept_0_19;;
+
+concept_abscess
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[абсцесс] (*<-lang_ru;;*);
+		[abscess] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_abscess=>..probability);;
+
+..probability -> [10/100] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_abscess=>..attributes);;
+
+..attributes
+			->..mass;
+			->..mass2;
+			-|>..calc;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[50/100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_dens_type:..dens;
+			=>nrel_margins_of_mass: ..margins_c;
+			=>nrel_margins_of_mass: ..margins_m;
+			=>nrel_margins_of_mass: ..margins_o;
+			=>nrel_margins_of_mass: ..margins_i;
+			=>nrel_margins_of_mass: ..margins_s;
+			=>nrel_artifact_size: [> 100](*=>nrel_probability:[100/100];;*);;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[50/100];;
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[50/100];;
+
+..nrel_dens_type
+			<-concept_high;
+			=>nrel_probability:[100/100];;
+
+..margins_c
+			<-concept_circumscribed;
+			=>nrel_probability:[20/100];;
+
+..margins_m
+			<-concept_microlobulated;
+			=>nrel_probability:[20/100];;
+
+..margins_o
+			<-concept_obscured;
+			=>nrel_probability:[20/100];;
+
+..margins_i
+			<-concept_indistinct;
+			=>nrel_probability:[20/100];;
+
+..margins_s
+			<-concept_spiculated;
+			=>nrel_probability:[20/100];;
+
+
+
+
+
+
+..mass2
+			<-concept_mass;
+			=>nrel_probability:[50/100];
+			=>nrel_shape_of_mass:..shape_irregular;
+			=>nrel_dens_type:..dens_h;
+			=>nrel_margins_of_mass: ..margins_indistinct;
+			=>nrel_artifact_size: [> 100](*=>nrel_probability:[100/100];;*);;
+
+
+
+..shape_irregular
+			<-concept_irregular;
+			=>nrel_probability:[100/100];;
+
+..dens_h
+			<-concept_high;
+			=>nrel_probability:[100/100];;
+
+..margins_indistinct
+		<-concept_indistinct;;
+
+
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[100/100];;

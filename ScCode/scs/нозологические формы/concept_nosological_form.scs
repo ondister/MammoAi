@@ -6,7 +6,7 @@ concept_nosological_form
 			-> concept_norm_nosological_form;
 			->concept_benign_nosological_form;
 			->concept_suspicious_nosological_form;
-			->concept_potentially_suspicious_nosological_form
+			->concept_potentially_suspicious_nosological_form;;
 
 concept_norm_nosological_form
 	<-sc_node_not_relation;
