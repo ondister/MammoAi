@@ -86,3 +86,15 @@ concept_image_URI
 concept_spatial_artefacts
 concept_laterality_artefacts
 concept_study_uid
+concept_age_group->
+	concept_0_19
+	concept_20_29
+	concept_30_39
+	concept_40_49
+	concept_50_59
+	concept_60_more
+concept_nosological_form->
+	concept_norm_nosological_form
+	concept_benign_nosological_form
+	concept_suspicious_nosological_form
+	concept_potentially_suspicious_nosological_form

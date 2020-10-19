@@ -1,0 +1,33 @@
+concept_nosological_form
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[нозологическая форма] (*<-lang_ru;;*);
+    	[nosological form] (*<-lang_en;;*);
+			-> concept_norm_nosological_form;
+			->concept_benign_nosological_form;
+			->concept_suspicious_nosological_form;
+			->concept_potentially_suspicious_nosological_form
+
+concept_norm_nosological_form
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[норма] (*<-lang_ru;;*);
+    	[norm] (*<-lang_en;;*);;
+
+concept_benign_nosological_form
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[доброкачественная нозологическая форма] (*<-lang_ru;;*);
+		[benign nosological form] (*<-lang_en;;*);;
+
+		concept_suspicious_nosological_form
+		<-sc_node_not_relation;
+		=>nrel_main_idtf:
+			[злокачественная нозологическая форма] (*<-lang_ru;;*);
+				[suspicious nosological form] (*<-lang_en;;*);;
+
+				concept_potentially_suspicious_nosological_form
+				<-sc_node_not_relation;
+				=>nrel_main_idtf:
+					[потенциально злокачественная нозологическая форма] (*<-lang_ru;;*);
+						[potentially suspicious nosological form] (*<-lang_en;;*);;
