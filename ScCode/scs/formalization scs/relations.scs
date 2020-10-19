@@ -107,8 +107,16 @@ nrel_margins_of_mass
     	[margins of mass*] (*<-lang_en;;*);;
 
 
-			nrel_uio_of_study
+			nrel_uid_of_study
 				<-sc_node_norole_relation;
 				=>nrel_main_idtf:
 					[уникальный идентификатор исследования*] (*<-lang_ru;;*);
-			    	[uio of study*] (*<-lang_en;;*);;
+			    	[uid of study*] (*<-lang_en;;*);;
+
+
+
+	nrel_is_inside
+							<-sc_node_norole_relation;
+							=>nrel_main_idtf:
+								[находится внутри*] (*<-lang_ru;;*);
+						    	[is inside*] (*<-lang_en;;*);;

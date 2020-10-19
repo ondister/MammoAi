@@ -14,4 +14,4 @@ nrel_wkt_text_of_artifact
 nrel_quadrant_of_artifact
 nrel_shape_of_mass
 nrel_margins_of_mass
-nrel_uio_of_study
+nrel_uid_of_study
