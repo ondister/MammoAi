@@ -1,0 +1,11 @@
+lib_component_ui_menu_probabilyty_counter
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса подсчета вероятности]
+	(* <- lang_ru;; *);
+	[Library component. User interfaces command of probabilyty counter]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;;
+
+lib_component_ui_menu_probabilyty_counter = [*^"file://ui_menu_probabilyty_counter.scsi"*];;

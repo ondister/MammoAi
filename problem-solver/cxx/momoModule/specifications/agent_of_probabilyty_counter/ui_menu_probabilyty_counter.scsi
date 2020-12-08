@@ -1,0 +1,23 @@
+ui_menu_probabilyty_counter <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_probabilyty_counter 
+=> nrel_main_idtf: 
+	[подсчет вероятности]
+	(* <- lang_ru;; *);;
+
+ui_menu_probabilyty_counter 
+=> nrel_main_idtf: 
+	[probabilyty counter]
+	(* <- lang_en;; *);;
+
+ui_menu_probabilyty_counter => ui_nrel_command_template:
+	[*
+		question_probabilyty_counter _-> ._question_probabilyty_counter_instance
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_probabilyty_counter_instance _<- question;;
+	*];;
+
+ui_menu_probabilyty_counter => ui_nrel_command_lang_template: [подсчет вероятности $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_probabilyty_counter => ui_nrel_command_lang_template: [probabilyty counter $ui_arg_1] (* <- lang_en;; *);;
