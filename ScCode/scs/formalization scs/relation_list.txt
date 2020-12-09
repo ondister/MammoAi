@@ -10,6 +10,7 @@ nrel_laterality
 nrel_pixel_data_of_image
 nrel_dens_type
 nrel_spatial_artefacts
+nrel_laterality_artefacts
 nrel_wkt_text_of_artifact
 nrel_quadrant_of_artifact
 nrel_shape_of_mass
