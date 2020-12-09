@@ -12,6 +12,20 @@
     <list default="true" id="8b124bb6-d15f-4422-b7ae-0c01301fa379" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../kb/ui_menu/ui_menu_na_example_commands.scs" beforeDir="false" afterPath="$PROJECT_DIR$/../../kb/ui_menu/ui_menu_na_example_commands.scs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/agents/SubdividingSearchAgent.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/agents/SubdividingSearchAgent.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/exampleModule.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/exampleModule.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/keynodes/keynodes.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/keynodes/keynodes.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/content/goal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/content/request.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/content/response.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/desc_agent_of_subdividing_search.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/lib_component_ui_menu_subdividing_search.scs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleModule/specifications/agent_of_subdividing_search/ui_menu_subdividing_search.scsi" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +49,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,6 +67,7 @@
       <updated>1607269677888</updated>
       <workItem from="1607269686450" duration="6161000" />
       <workItem from="1607276737090" duration="32000" />
+      <workItem from="1607498649700" duration="1303000" />
     </task>
     <servers />
   </component>
