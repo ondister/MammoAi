@@ -91,6 +91,7 @@ bool isArtifactType(ScMemoryContext * context, ScAddr  artifact_type)
                     }
 
                     string spatials_report;
+                    string probability_report;
 
                     for (int i=0; i<images.size(); i++){
                         ScIterator5Ptr metaIT = ms_context->Iterator5(images[i], ScType::EdgeDCommonConst,
@@ -165,7 +166,9 @@ bool isArtifactType(ScMemoryContext * context, ScAddr  artifact_type)
                             spatials = spatIT->Get(2);
                         }
 ////////spatials to probability counter
-
+//AgentUtils::initAgentAndWaitResult(ms_context.get(), Keynodes::question_probabilyty_counter, { spatials });
+spatials_report+=CommonUtils::getIdtfValue(ms_context.get(), spatials, Keynodes::nrel_study_report);
+SC_LOG_INFO(spatials_report);
                         //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, spatials);
 
 

@@ -102,6 +102,8 @@ static ScAddr nrel_attributes;
 
     SC_PROPERTY(Keynode("nrel_probability"), ForceCreate)
     static ScAddr nrel_probability;
+    SC_PROPERTY(Keynode("concept_mass"), ForceCreate)
+    static ScAddr concept_mass;
 };
 
 } // namespace exampleModule

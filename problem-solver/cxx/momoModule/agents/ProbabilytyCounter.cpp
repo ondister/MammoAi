@@ -216,7 +216,7 @@ namespace momoModule {
 								string strtemp =
 									"[" + to_string(a) + "] " + "[" + to_string(b) + "] " + "[" + to_string(c) + "] " + "[" + to_string(d) + "] " +
 									"[" + to_string(e) + "]";
-								SC_LOG_INFO(strtemp);
+                                                                //SC_LOG_INFO(strtemp);
 								ScAddr type;
 								ScIterator3Ptr TypeIT = ms_context->Iterator3(ScType::Unknown,
 									ScType::EdgeAccessConstPosPerm,
@@ -225,9 +225,9 @@ namespace momoModule {
 									type = TypeIT->Get(0);
 								}
 								string strin = CommonUtils::getIdtfValue(ms_context, type, Keynodes::nrel_main_idtf);
-								SC_LOG_INFO(strin);
+                                                                //SC_LOG_INFO(strin);
 								string str = CommonUtils::getIdtfValue(ms_context, node, Keynodes::nrel_probability);
-								SC_LOG_INFO(str);
+                                                                //SC_LOG_INFO(str);
 							}
 						}
 					}
@@ -251,9 +251,12 @@ namespace momoModule {
 		for (int j = 0; j < artifacts.size(); j++) {
 			ScIterator3Ptr arttype = ms_context->Iterator3(ScType::Unknown, ScType::EdgeAccessConstPosPerm, artifacts[j]);
 			while (arttype->Next()) {
+                            if(ms_context->HelperCheckEdge(Keynodes::concept_artifact_type, arttype->Get(0), ScType::EdgeAccessConstPosPerm)){
 				art_type.push_back(arttype->Get(0));
-				string strin = CommonUtils::getIdtfValue(ms_context.get(), arttype->Get(0), Keynodes::nrel_main_idtf);
-				SC_LOG_INFO(strin);
+                                string strin = CommonUtils::getIdtfValue(ms_context, arttype->Get(0), Keynodes::nrel_main_idtf);
+                                SC_LOG_INFO(strin);
+                                SC_LOG_INFO("arttype");
+                            }
 			}
 		}
 
@@ -265,7 +268,7 @@ namespace momoModule {
 			//ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, art_type[j]);
 
 
-			SC_LOG_INFO("/////")
+                        //SC_LOG_INFO("/////")
 				ScIterator5Ptr shapeIT = ms_context->Iterator5(artifacts[j], ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_shape_of_mass);
 			vector <ScAddr> shape;
 			while (shapeIT->Next()) {
@@ -282,10 +285,10 @@ namespace momoModule {
 			}
 			for (int k = 0; k < shape_type.size(); k++) {
 				if (shape_type[k].IsValid()) {
-					SC_LOG_INFO("shape");
+                                        //SC_LOG_INFO("shape");
 
 					string shape_str = CommonUtils::getIdtfValue(ms_context, shape_type[k], Keynodes::nrel_main_idtf);
-					SC_LOG_INFO(shape_str);
+                                        //SC_LOG_INFO(shape_str);
 				}
 			}
 			artifact.push_back(shape);
@@ -308,9 +311,9 @@ namespace momoModule {
 			}
 			for (int k = 0; k < marg_type.size(); k++) {
 				if (marg_type[k].IsValid()) {
-					SC_LOG_INFO("margins");
+                                        //SC_LOG_INFO("margins");
 					string marg_str = CommonUtils::getIdtfValue(ms_context, marg_type[k], Keynodes::nrel_main_idtf);
-					SC_LOG_INFO(marg_str)
+                                        //SC_LOG_INFO(marg_str)
 				}
 			}
 			artifact.push_back(marg);
@@ -332,9 +335,9 @@ namespace momoModule {
 			}
 			for (int k = 0; k < den_type.size(); k++) {
 				if (den_type[k].IsValid()) {
-					SC_LOG_INFO("density");
+                                        //SC_LOG_INFO("density");
 					string den_str = CommonUtils::getIdtfValue(ms_context, den_type[k], Keynodes::nrel_main_idtf);
-					SC_LOG_INFO(den_str)
+                                        //SC_LOG_INFO(den_str)
 				}
 			}
 			artifact.push_back(den);
@@ -348,9 +351,9 @@ namespace momoModule {
 
 			for (int k = 0; k < size.size(); k++) {
 				if (size[k].IsValid()) {
-					SC_LOG_INFO("size");
+                                        //SC_LOG_INFO("size");
 					string size_str = CommonUtils::getIdtfValue(ms_context, artifacts[j], Keynodes::nrel_artifact_size);
-					SC_LOG_INFO(size_str)
+                                        //SC_LOG_INFO(size_str)
 				}
 			}
 			artifact.push_back(size);
@@ -376,9 +379,9 @@ namespace momoModule {
 
 			for (int k = 0; k < dist_type.size(); k++) {
 				if (dist_type[k].IsValid()) {
-					SC_LOG_INFO("dist");
+                                        //SC_LOG_INFO("dist");
 					string dist_str = CommonUtils::getIdtfValue(ms_context, dist_type[k], Keynodes::nrel_main_idtf);
-					SC_LOG_INFO(dist_str)
+                                        //SC_LOG_INFO(dist_str)
 				}
 			}
 			artifact.push_back(dist);
@@ -386,11 +389,80 @@ namespace momoModule {
 			artifacts_v.push_back(artifact);
 		}
 
-		return
-			artifacts_v;
+                return	artifacts_v;
 	}
 
-	SC_AGENT_IMPLEMENTATION(ProbabilytyCounter)
+        void read_3_vector( vector < vector < vector < ScAddr >>> study, ScMemoryContext* ms_context){
+            for (int c = 0; c < study.size(); c++) {
+                    for (int d = 0; d < study[c].size(); d++) {
+                            for (int e = 0; e < study[c][d].size(); e++) {
+                                    ScAddr node = study[c][d][e];
+                                    if (node.IsValid()) {
+                                            string strtemp = "[" + to_string(c) + "] " + "[" + to_string(d) + "] " + "[" + to_string(e) + "]";
+                                           // SC_LOG_INFO(strtemp);
+                                            ScAddr type;
+                                            ScIterator3Ptr TypeIT = ms_context->Iterator3(ScType::Unknown, ScType::EdgeAccessConstPosPerm, node);
+                                            while (TypeIT->Next()) {
+                                                    type = TypeIT->Get(0);
+                                            }
+                                            string strin = CommonUtils::getIdtfValue(ms_context, type, Keynodes::nrel_main_idtf);
+                                            //SC_LOG_INFO(strin);
+                                            if(ms_context->HelperCheckEdge(Keynodes::concept_mass, type,ScType::EdgeAccessConstPosPerm)){
+                                                //SC_LOG_INFO("artifact");
+                                            }
+                                           /* if(d==0){
+                                                SC_LOG_INFO("0");
+                                                ScIterator5Ptr shapeIT = ms_context->Iterator5(type, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_shape_of_mass);
+
+                                             while (shapeIT->Next()) {
+                                                 if(shapeIT->Get(2).IsValid()){
+                                                 SC_LOG_INFO("mass");
+                                                 }
+                                             }
+
+
+
+                                           ScIterator5Ptr shapecIT = ms_context->Iterator5(type, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_calc_distribution);
+
+                                        while (shapecIT->Next()) {
+                                            if(shapecIT->Get(2).IsValid()){
+                                                SC_LOG_INFO("calc");
+                                                     }
+                                        }
+
+
+                                            }*/
+
+                                    }
+                            }
+                    }
+            }
+
+        }
+
+        float probability_count(ScMemoryContext* ms_context, ScAddr nos_form){
+        //ScAddr nos_form=forms[a][0][0][0][0];
+        string nos_form_str = CommonUtils::getIdtfValue(ms_context, nos_form, Keynodes::nrel_main_idtf);
+        //SC_LOG_INFO(nos_form_str);
+
+        ScIterator5Ptr prIT = ms_context->Iterator5(nos_form, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_probability);
+                ScAddr probability;
+                while (prIT->Next()) {
+                                probability = prIT->Get(2);
+                }
+        ScAddr form_probability;
+        ScIterator3Ptr proIT = ms_context->Iterator3(probability, ScType::EdgeAccessConstPosPerm, ScType::Unknown);
+        while (proIT->Next()) {
+                form_probability=proIT->Get(2);
+        }
+        string value = CommonUtils::readString(ms_context, form_probability);
+        SC_LOG_INFO(value);
+        float form_pr = stof(value);
+        //probability_f=(form_pr)/100;
+        SC_LOG_INFO(to_string(form_pr));
+        return form_pr/100;
+        }
+        SC_AGENT_IMPLEMENTATION(ProbabilytyCounter)
 	{
 		if (!edgeAddr.IsValid())
 			return SC_RESULT_ERROR;
@@ -406,28 +478,293 @@ namespace momoModule {
 		vector<vector<vector<vector<vector<ScAddr>>>>> forms = nosological_forms(ms_context.get());
 		read_5_vector(forms, ms_context.get());
 		vector<vector<vector<ScAddr>>>study = study_artefacts(ms_context.get(), spatials);
+                read_3_vector(study, ms_context.get());
+string report;
+                for (int a = 0; a < forms.size(); a++) {
+                    float probability_f=0;
+                        for (int b = 0; b < forms[a].size(); b++) {
+                                for (int c = 0; c < forms[a][b].size(); c++) {
+                                        for (int d = 0; d < forms[a][b][c].size(); d++) {
+                                                for (int e = 0; e < forms[a][b][c][d].size(); e++) {
+                                                    ScAddr node = forms[a][b][c][d][e];
+                                                    if (node.IsValid()) {
+                                                    if(b==0&&c==0&&d==0&&e==0){
+                                                    ScAddr nos_form=forms[a][0][0][0][0];
+                                                    float value=probability_count(ms_context.get(),nos_form);
+                                                   string nos_form_str = CommonUtils::getIdtfValue(ms_context.get(), nos_form, Keynodes::nrel_main_idtf);
+                                                    SC_LOG_INFO(nos_form_str);
+                                                    report=report+nos_form_str+"-";
+/*
+                                                    ScIterator5Ptr prIT = ms_context->Iterator5(nos_form, ScType::EdgeDCommonConst, ScType::Unknown, ScType::EdgeAccessConstPosPerm, Keynodes::nrel_probability);
+                                                            ScAddr probability;
+                                                            while (prIT->Next()) {
+                                                                            probability = prIT->Get(2);
+                                                            }
+                                                    ScAddr form_probability;
+                                                    ScIterator3Ptr proIT = ms_context->Iterator3(probability, ScType::EdgeAccessConstPosPerm, ScType::Unknown);
+                                                    while (proIT->Next()) {
+                                                            form_probability=proIT->Get(2);
+                                                    }
+                                                    string value = CommonUtils::readString(ms_context.get(), form_probability);
+                                                    SC_LOG_INFO(value);
+                                                    float form_pr = stof(value);*/
+                                                    probability_f=value;
+                                                    SC_LOG_INFO(to_string(probability_f));
+                                                    }
+
+
+                                                    //if(c==0&&d==0&&e==0){
+                                                        for(int f=0; f<study.size();f++){
+                                                            SC_LOG_INFO("1f");
+
+                                                            //если образование или кальцинат то плюс вероятность study[f][0][0]
+
+
+                                                    //for(int g=0; g<study[f].size(); g++){
+                                                       // SC_LOG_INFO("1g");
+                                                       // string s = to_string(study.size())+ "  -  "+to_string(study[f].size());
+                                                        //SC_LOG_INFO(s);
+
+                                                        ScAddr nodeF=forms[a][b][c][d][e];
+                                                        //SC_LOG_INFO("1.5g");
+                                                        //if(f==0&&g==5){break;}
+                                                        //ScAddr nodeS=study[f][g][0];
+                                                       // SC_LOG_INFO("2g");
+                                                        //if(nodeF.IsValid()&&study[f][g][0].IsValid()){
+                                                          //  SC_LOG_INFO("3g");
+                                                            ScAddr nodeS=study[f][0][0];
+                                                           // SC_LOG_INFO("3.5g");
+
+                                                        string strforms =
+                                                                "[" + to_string(a) + "] " + "[" + to_string(b) + "] " + "[" + to_string(c) + "] " + "[" + to_string(d) + "] " +
+                                                                "[" + to_string(e) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        string strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(0) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strstudy);
 
 
 
-		for (int c = 0; c < study.size(); c++) {
-			for (int d = 0; d < study[c].size(); d++) {
-				for (int e = 0; e < study[c][d].size(); e++) {
-					ScAddr node = study[c][d][e];
-					if (node.IsValid()) {
-						string strtemp =
-							"[" + to_string(c) + "] " + "[" + to_string(d) + "] " + "[" + to_string(e) + "]";
-						SC_LOG_INFO(strtemp);
-						ScAddr type;
-						ScIterator3Ptr TypeIT = ms_context->Iterator3(ScType::Unknown, ScType::EdgeAccessConstPosPerm, node);
-						while (TypeIT->Next()) {
-							type = TypeIT->Get(0);
-						}
-						string strin = CommonUtils::getIdtfValue(ms_context.get(), type, Keynodes::nrel_main_idtf);
-						SC_LOG_INFO(strin);
-					}
-				}
-			}
-		}
+                                                        ScAddr typeF;
+                                                        ScIterator3Ptr TypeFIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeF);
+                                                        while (TypeFIT->Next()) {
+                                                                typeF = TypeFIT->Get(0);
+                                                        }
+                                                        string strinF = CommonUtils::getIdtfValue(ms_context.get(), typeF, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinF);
+
+
+
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        string strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinS);
+                                                        ///////////////////////////////////////////////////
+                                                        if(f==1){
+                                                        strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(1) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        SC_LOG_INFO(strstudy);
+
+
+                                                        if(study[f][1][0].IsValid()){
+                                                        nodeS=study[f][1][0];
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinF);
+                                                        SC_LOG_INFO(strinS);
+                                                        if(strinF==strinS){
+                                                            string str = CommonUtils::getIdtfValue(ms_context.get(), nodeF, Keynodes::nrel_probability);
+                                                            SC_LOG_INFO(str);
+
+                                                            float form_pr = stof(str);
+                                                            probability_f=probability_f*(form_pr/100);
+                                                            SC_LOG_INFO(to_string(probability_f));
+
+                                                            SC_LOG_INFO("------------------------------------------------------------------------");
+                                                        }}
+                                                        //////////////////////////////////////////////////////
+                                                        strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(2) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        SC_LOG_INFO(strstudy);
+
+                                                        if(study[f][2][0].IsValid()){
+                                                        nodeS=study[f][2][0];
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinF);
+                                                        SC_LOG_INFO(strinS);
+                                                        if(strinF==strinS){
+                                                            string str = CommonUtils::getIdtfValue(ms_context.get(), nodeF, Keynodes::nrel_probability);
+                                                            SC_LOG_INFO(str);
+                                                            float form_pr = stof(str);
+                                                            probability_f=probability_f*(form_pr/100);
+                                                            SC_LOG_INFO(to_string(probability_f));
+                                                            SC_LOG_INFO("------------------------------------------------------------------------");
+                                                        }}
+                                                       //////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                        strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(3) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        SC_LOG_INFO(strstudy);
+
+                                                        if(study[f][3][0].IsValid()){
+                                                        nodeS=study[f][3][0];
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinF);
+                                                        SC_LOG_INFO(strinS);
+                                                        if(strinF==strinS){
+                                                            string str = CommonUtils::getIdtfValue(ms_context.get(), nodeF, Keynodes::nrel_probability);
+                                                            SC_LOG_INFO(str);
+                                                            float form_pr = stof(str);
+                                                            probability_f=probability_f*(form_pr/100);
+                                                            SC_LOG_INFO(to_string(probability_f));
+                                                            SC_LOG_INFO("------------------------------------------------------------------------");
+                                                        }}
+                                                        /////////////////////////////////////////////
+                                                        strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(4) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        SC_LOG_INFO(strstudy);
+
+                                                        if(study[f][4][0].IsValid()){
+                                                        nodeS=study[f][4][0];
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                       SC_LOG_INFO(strinF);
+                                                       SC_LOG_INFO(strinS);
+                                                       if(strinF==strinS){
+                                                           string str = CommonUtils::getIdtfValue(ms_context.get(), nodeF, Keynodes::nrel_probability);
+                                                           SC_LOG_INFO(str);
+                                                           float form_pr = stof(str);
+                                                           probability_f=probability_f*(form_pr/100);
+                                                           SC_LOG_INFO(to_string(probability_f));
+                                                           SC_LOG_INFO("------------------------------------------------------------------------");
+                                                       }}
+                                                        }
+                                                        ////////////////////////////////////////////
+                                                        if(f==0){
+                                                        strstudy =
+                                                                "[" + to_string(0) + "] " + "[" + to_string(0) + "] " + "[" + to_string(f) + "] " + "[" + to_string(5) + "] " +
+                                                                "[" + to_string(0) + "]";
+                                                        SC_LOG_INFO(strforms);
+                                                        SC_LOG_INFO(strstudy);
+
+                                                        if(study[f][5][0].IsValid()){
+                                                        nodeS=study[f][5][0];
+                                                        ScAddr typeS;
+                                                        ScIterator3Ptr TypeSIT = ms_context->Iterator3(ScType::Unknown,
+                                                                ScType::EdgeAccessConstPosPerm,
+                                                                nodeS);
+                                                        while (TypeSIT->Next()) {
+                                                                typeS = TypeSIT->Get(0);
+                                                        }
+                                                        strinS = CommonUtils::getIdtfValue(ms_context.get(), typeS, Keynodes::nrel_main_idtf);
+                                                        SC_LOG_INFO(strinF);
+                                                        SC_LOG_INFO(strinS);
+                                                        if(strinF==strinS){
+                                                            string str = CommonUtils::getIdtfValue(ms_context.get(), nodeF, Keynodes::nrel_probability);
+                                                             SC_LOG_INFO(str);
+                                                             float form_pr = stof(str);
+                                                             probability_f=probability_f*(form_pr/100);
+                                                             SC_LOG_INFO(to_string(probability_f));
+                                                            SC_LOG_INFO("------------------------------------------------------------------------");
+                                                        }}
+                                                        }
+                                                        /////////////////////////////////////
+
+                                                       // }
+                                                        //SC_LOG_INFO("4g");
+
+                                                   // }
+                                                    }
+
+                                                    }
+                                                    /*
+                                                        ScAddr node = forms[a][b][c][d][e];
+                                                        if (node.IsValid()) {
+                                                                string strtemp =
+                                                                        "[" + to_string(a) + "] " + "[" + to_string(b) + "] " + "[" + to_string(c) + "] " + "[" + to_string(d) + "] " +
+                                                                        "[" + to_string(e) + "]";
+                                                                SC_LOG_INFO(strtemp);
+                                                                ScAddr type;
+                                                                ScIterator3Ptr TypeIT = ms_context->Iterator3(ScType::Unknown,
+                                                                        ScType::EdgeAccessConstPosPerm,
+                                                                        node);
+                                                                while (TypeIT->Next()) {
+                                                                        type = TypeIT->Get(0);
+                                                                }
+                                                                string strin = CommonUtils::getIdtfValue(ms_context.get(), type, Keynodes::nrel_main_idtf);
+                                                                SC_LOG_INFO(strin);
+                                                                string str = CommonUtils::getIdtfValue(ms_context.get(), node, Keynodes::nrel_probability);
+                                                                SC_LOG_INFO(str);
+                                                        }*/
+                                                }
+                                        }
+                                }
+                        }
+                        probability_f*=100;
+                        report = report+to_string(probability_f)+"%\n";
+
+                }
+SC_LOG_INFO(report);
+
+ScAddr answer_link = ms_context->CreateLink();
+string value = report;
+
+ScStreamPtr stream;
+stream.reset(new ScStream(value.c_str(), (sc_uint32) value.size(), SC_STREAM_FLAG_READ ));
+ms_context->SetLinkContent(answer_link, *stream);
+
+
+
+ScAddr edge_answer = ms_context->CreateEdge(ScType::EdgeDCommonConst,spatials , answer_link);
+
+ScAddr edge_edge_answer = ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, Keynodes::nrel_study_report, edge_answer);
+
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, answer_link);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, spatials);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, edge_answer);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, edge_edge_answer);
+ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, Keynodes::nrel_study_report );
 
 
 
@@ -751,7 +1088,7 @@ namespace momoModule {
 								}
 							}
 		*/
-		ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, spatials);
+                //ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, spatials);
 		SC_LOG_INFO("----------counter end----------");
 		AgentUtils::finishAgentWork(ms_context.get(), questionNode, answer);
 		return SC_RESULT_OK;

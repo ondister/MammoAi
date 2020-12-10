@@ -40,4 +40,5 @@ ScAddr Keynodes::concept_right_laterality;
 ScAddr Keynodes::concept_nosological_form;
 ScAddr Keynodes::nrel_attributes;
    ScAddr Keynodes::nrel_probability;
+   ScAddr Keynodes::concept_mass;
 }
