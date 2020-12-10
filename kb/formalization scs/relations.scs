@@ -1,0 +1,122 @@
+nrel_age
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[возраст*] (*<-lang_ru;;*);
+    	[age*] (*<-lang_en;;*);;
+
+nrel_patient_hormonal_status
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[гормональный статус пациента*] (*<-lang_ru;;*);
+    	[patient hormonal status*] (*<-lang_en;;*);;
+
+nrel_patients_study
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[исследование пациента*] (*<-lang_ru;;*);
+    	[patients study*] (*<-lang_en;;*);;
+
+nrel_image
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[изображение*] (*<-lang_ru;;*);
+    	[image*] (*<-lang_en;;*);;
+
+nrel_metadata_of_image
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[метаданные изображения*] (*<-lang_ru;;*);
+    	[metadata of image*] (*<-lang_en;;*);;
+
+nrel_height_of_image
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[высота изображения*] (*<-lang_ru;;*);
+    	[height of image*] (*<-lang_en;;*);;
+
+nrel_width_of_image
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[ширина изображения*] (*<-lang_ru;;*);
+    	[width of image*] (*<-lang_en;;*);;
+
+nrel_projection
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[проекция*] (*<-lang_ru;;*);
+    	[projection*] (*<-lang_en;;*);;
+
+nrel_laterality
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[латеральность*] (*<-lang_ru;;*);
+    	[laterality*] (*<-lang_en;;*);;
+
+nrel_pixel_data_of_image
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[массив пикселей*] (*<-lang_ru;;*);
+    	[pixel data of image*] (*<-lang_en;;*);;
+
+nrel_laterality_artefacts
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[артефакты латеральности*] (*<-lang_ru;;*);
+    	[pixel data of image*] (*<-lang_en;;*);;
+
+nrel_dens_type
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[тип плотности*] (*<-lang_ru;;*);
+    	[dens type*] (*<-lang_en;;*);;
+
+nrel_spatial_artefacts
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[геометрические артефакты*] (*<-lang_ru;;*);
+    	[spatial artefacts*] (*<-lang_en;;*);;
+
+nrel_nipple_distination
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[расстояние до соска*] (*<-lang_ru;;*);
+    	[nipple distination*] (*<-lang_en;;*);;
+
+nrel_wkt_text_of_artifact
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[wkt текст*] (*<-lang_ru;;*);
+    	[wkt text of artifact*] (*<-lang_en;;*);;
+
+nrel_quadrant_of_artifact
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[квадрант артефакта*] (*<-lang_ru;;*);
+    	[quadrant of artifact*] (*<-lang_en;;*);;
+
+nrel_shape_of_mass
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[форма образования*] (*<-lang_ru;;*);
+    	[shape of mass*] (*<-lang_en;;*);;
+
+nrel_margins_of_mass
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[границы образования*] (*<-lang_ru;;*);
+    	[margins of mass*] (*<-lang_en;;*);;
+
+
+			nrel_uid_of_study
+				<-sc_node_norole_relation;
+				=>nrel_main_idtf:
+					[уникальный идентификатор исследования*] (*<-lang_ru;;*);
+			    	[uid of study*] (*<-lang_en;;*);;
+
+
+
+	nrel_is_inside
+							<-sc_node_norole_relation;
+							=>nrel_main_idtf:
+								[находится внутри*] (*<-lang_ru;;*);
+						    	[is inside*] (*<-lang_en;;*);;

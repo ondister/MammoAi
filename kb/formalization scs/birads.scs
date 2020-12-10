@@ -1,0 +1,85 @@
+concept_birads
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[birads] (*<-lang_ru;;*);
+    	[birads] (*<-lang_en;;*);;
+
+concept_0
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[0] (*<-lang_ru;;*);
+    	[0] (*<-lang_en;;*);;
+
+concept_birads->concept_0;;
+
+concept_1
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[1] (*<-lang_ru;;*);
+    	[1] (*<-lang_en;;*);;
+
+concept_birads->concept_1;;
+
+concept_2
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[2] (*<-lang_ru;;*);
+    	[2] (*<-lang_en;;*);;
+
+concept_birads->concept_2;;
+
+concept_3
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[3] (*<-lang_ru;;*);
+    	[3] (*<-lang_en;;*);;
+
+concept_birads->concept_3;;
+
+concept_4
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[4] (*<-lang_ru;;*);
+    	[4] (*<-lang_en;;*);;
+
+concept_birads->concept_4;;
+
+concept_4a
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[4a] (*<-lang_ru;;*);
+    	[4a] (*<-lang_en;;*);;
+
+concept_4->concept_4a;;
+
+concept_4b
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[4b] (*<-lang_ru;;*);
+    	[4b] (*<-lang_en;;*);;
+
+concept_4->concept_4b;;
+
+concept_4c
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[4c] (*<-lang_ru;;*);
+    	[4c] (*<-lang_en;;*);;
+
+concept_4->concept_4c;;
+
+concept_5
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[5] (*<-lang_ru;;*);
+    	[5] (*<-lang_en;;*);;
+
+concept_birads->concept_5;;
+
+concept_6
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[6] (*<-lang_ru;;*);
+    	[6] (*<-lang_en;;*);;
+
+concept_birads->concept_6;;

@@ -1,0 +1,37 @@
+concept_mass_density
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[плотность образования] (*<-lang_ru;;*);
+    	[mass density] (*<-lang_en;;*);;
+
+concept_high
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[гиперденсивная] (*<-lang_ru;;*);
+    	[high] (*<-lang_en;;*);;
+
+concept_mass_density->concept_high;;
+
+concept_equal
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[изоденсивная] (*<-lang_ru;;*);
+    	[equal] (*<-lang_en;;*);;
+
+concept_mass_density->concept_equal;;
+
+concept_low
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[гиподенсивная] (*<-lang_ru;;*);
+    	[low] (*<-lang_en;;*);;
+
+concept_mass_density->concept_low;;
+
+concept_fat
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[жировая] (*<-lang_ru;;*);
+    	[fat] (*<-lang_en;;*);;
+
+concept_mass_density->concept_fat;;

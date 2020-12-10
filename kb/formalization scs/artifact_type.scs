@@ -1,0 +1,125 @@
+concept_artifact
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[тип артефакта] (*<-lang_ru;;*);
+    	[artifact type] (*<-lang_en;;*);;
+
+concept_mass
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[образование] (*<-lang_ru;;*);
+    	[mass] (*<-lang_en;;*);;
+
+concept_artifact->concept_mass;;
+
+concept_calc
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[кальцинат] (*<-lang_ru;;*);
+    	[calc] (*<-lang_en;;*);;
+
+concept_artifact->concept_calc;;
+
+concept_dist
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[нарушение] (*<-lang_ru;;*);
+    	[dist] (*<-lang_en;;*);;
+
+concept_artifact->concept_dist;;
+
+concept_asym
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[ассиметрия] (*<-lang_ru;;*);
+    	[asym] (*<-lang_en;;*);;
+
+concept_artifact->concept_asym;;
+
+concept_lnode
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[лимфоузел] (*<-lang_ru;;*);
+    	[lnode] (*<-lang_en;;*);;
+
+concept_artifact->concept_lnode;;
+
+concept_skin_l
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[поражение_кожи] (*<-lang_ru;;*);
+    	[skin l] (*<-lang_en;;*);;
+
+concept_artifact->concept_skin_l;;
+
+concept_dilduct
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[проток] (*<-lang_ru;;*);
+    	[dilduct] (*<-lang_en;;*);;
+
+concept_artifact->concept_dilduct;;
+
+concept_skin_retraction
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[втяжение кожи] (*<-lang_ru;;*);
+    	[skin retraction] (*<-lang_en;;*);;
+
+concept_artifact->concept_skin_retraction;;
+
+concept_nipple_retraction
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[втяжение соска] (*<-lang_ru;;*);
+    	[nipple retraction] (*<-lang_en;;*);;
+
+concept_artifact->concept_nipple_retraction;;
+
+concept_skin_thickening
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[утолщение кожи] (*<-lang_ru;;*);
+    	[skin thickening] (*<-lang_en;;*);;
+
+concept_artifact->concept_skin_thickening;;
+
+concept_trabs
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[утолщение трабекул] (*<-lang_ru;;*);
+    	[trabs] (*<-lang_en;;*);;
+
+concept_artifact->concept_trabs;;
+
+concept_adenopathy
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[лимфоаденопатия] (*<-lang_ru;;*);
+    	[adenopathy] (*<-lang_en;;*);;
+
+concept_artifact->concept_adenopathy;;
+
+concept_nipple
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[сосок] (*<-lang_ru;;*);
+    	[nipple] (*<-lang_en;;*);;
+
+concept_artifact->concept_nipple;;
+
+concept_implant
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[имплант] (*<-lang_ru;;*);
+    	[implant] (*<-lang_en;;*);;
+
+concept_artifact->concept_implant;;
+
+concept_skin_papilloma
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[кожная папиллома] (*<-lang_ru;;*);
+    	[skin papilloma] (*<-lang_en;;*);;
+
+concept_artifact->concept_skin_papilloma;;

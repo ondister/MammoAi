@@ -1,0 +1,35 @@
+nrel_patient_report
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[отчет пациента*] (*<-lang_ru;;*);
+    	[patient report*] (*<-lang_en;;*);;
+
+nrel_study_report
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[отчет study*] (*<-lang_ru;;*);
+    	[study report*] (*<-lang_en;;*);;
+
+nrel_mass_density
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[плотность образования*] (*<-lang_ru;;*);
+    	[mass density*] (*<-lang_en;;*);;
+
+nrel_artifact_size
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[размер артифакта*] (*<-lang_ru;;*);
+    	[artifact size*] (*<-lang_en;;*);;
+
+nrel_calc_distribution
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[распределение кальцинатов*] (*<-lang_ru;;*);
+    	[calc distribution*] (*<-lang_en;;*);;
+
+concept_artifact_size
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[размер артифакта] (*<-lang_ru;;*);
+    	[artifact size] (*<-lang_en;;*);;

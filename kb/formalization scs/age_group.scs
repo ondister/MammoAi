@@ -1,0 +1,62 @@
+concept_age_group
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[возрастная группа] (*<-lang_ru;;*);
+    	[age group] (*<-lang_en;;*);;
+
+concept_0_19
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[0-19] (*<-lang_ru;;*);
+    	[0-19] (*<-lang_en;;*);;
+
+concept_age_group->concept_0_19;;
+
+concept_20_29
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[20-29] (*<-lang_ru;;*);
+    	[20-29] (*<-lang_en;;*);;
+
+concept_age_group->concept_20_29;;
+
+concept_30_39
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[30-39] (*<-lang_ru;;*);
+    	[30-39] (*<-lang_en;;*);;
+
+concept_age_group->concept_30_39;;
+
+
+concept_40_49
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[40-49] (*<-lang_ru;;*);
+    	[40-49] (*<-lang_en;;*);;
+
+concept_age_group->concept_40_49;;
+
+concept_50_59
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[50-59] (*<-lang_ru;;*);
+    	[50-59] (*<-lang_en;;*);;
+
+concept_age_group->concept_50_59;;
+
+concept_60_more
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[60-] (*<-lang_ru;;*);
+    	[60-] (*<-lang_en;;*);;
+
+concept_age_group->concept_60_more;;
+
+concept_all_ages
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[все возраста] (*<-lang_ru;;*);
+		[all ages] (*<-lang_en;;*);;
+
+concept_age_group->concept_all_ages;;

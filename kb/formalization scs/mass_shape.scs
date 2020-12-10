@@ -1,0 +1,29 @@
+concept_mass_shape
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[форма образования] (*<-lang_ru;;*);
+    	[mass shape] (*<-lang_en;;*);;
+
+concept_round
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[округлая] (*<-lang_ru;;*);
+    	[round] (*<-lang_en;;*);;
+
+concept_mass_shape->concept_round;;
+
+concept_oval
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[овальная] (*<-lang_ru;;*);
+    	[oval] (*<-lang_en;;*);;
+
+concept_mass_shape->concept_oval;;
+
+concept_irregular
+	<-sc_node_not_relation;
+	=>nrel_main_idtf:
+		[неправильная] (*<-lang_ru;;*);
+    	[irregular] (*<-lang_en;;*);;
+
+concept_mass_shape->concept_irregular;;
