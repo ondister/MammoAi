@@ -1,0 +1,66 @@
+concept_cancer178
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[рак 178] (*<-lang_ru;;*);
+		[cancer] (*<-lang_en;;*);
+		<-concept_suspicious_nosological_form;;
+
+nrel_probability->(concept_cancer178=>..probability1);;
+..probability1 -> [1] (*=>nrel_age:concept_all_ages;;*);;
+
+
+
+nrel_attributes->(concept_cancer178=>..attributes);;
+
+..attributes
+			->..mass;
+		
+			->..calc;;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_shape_of_mass:..shape_irregular;
+			=>nrel_mass_density:..dens;
+			=>nrel_mass_density:..dens1;
+			=>nrel_margins_of_mass: ..margins;
+			=>nrel_margins_of_mass: ..margins1;
+			=>nrel_artifact_size: [>0](*=>nrel_probability:[100];;*);;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[33];;
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[33];;
+
+..shape_irregular
+			<-concept_oval;
+			=>nrel_probability:[33];;
+
+..dens
+			<-concept_high;
+			=>nrel_probability:[50];;
+..dens1
+			<-concept_equal;
+			=>nrel_probability:[50];;
+
+..margins
+			<-concept_circumscribed;
+			=>nrel_probability:[30];;
+
+..margins1
+			<-concept_indistinct;
+			=>nrel_probability:[30];;
+
+
+
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[5];;
+		
+

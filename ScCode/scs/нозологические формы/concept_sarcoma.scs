@@ -1,0 +1,52 @@
+concept_sarcoma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[саркома] (*<-lang_ru;;*);
+		[sarcoma] (*<-lang_en;;*);
+		<-concept_suspicious_nosological_form;;
+
+nrel_probability->(concept_sarcoma=>..probability);;
+
+..probability -> [1] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_sarcoma=>..attributes);;
+
+..attributes
+			->..mass;
+			->..calc;;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_mass_density:..dens;
+			=>nrel_margins_of_mass: ..margins_c;
+			=>nrel_margins_of_mass: ..margins_i;
+			=>nrel_artifact_size: [>0](*=>nrel_probability:[100];;*);;
+
+
+..shape_irregular
+			<-concept_irregular;
+			=>nrel_probability:[100];;
+
+..dens
+			<-concept_high;
+			=>nrel_probability:[100];;
+
+..margins_c
+			<-concept_circumscribed;
+			=>nrel_probability:[30];;
+
+
+..margins_i
+			<-concept_indistinct;
+			=>nrel_probability:[70];;
+
+
+
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[0];;

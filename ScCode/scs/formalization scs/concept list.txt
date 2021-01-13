@@ -50,7 +50,7 @@ concept_feature->
 	concept_true
 concept_mass_density->
 	concept_high
-	concept_equalco
+	concept_equal
 	concept_low
 	concept_fat
 concept_mass_margins->

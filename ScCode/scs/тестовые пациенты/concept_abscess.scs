@@ -1,5 +1,0 @@
-concept_study->..study;;
-
-..patient<-concept_patient;;
-
-nrel_patients_study->(..patient=>..study);;

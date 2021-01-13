@@ -1,5 +1,3 @@
-concept_age_group->concept_0_19;;
-
 concept_abscess
 <-sc_node_not_relation;
 =>nrel_main_idtf:
@@ -9,7 +7,7 @@ concept_abscess
 
 nrel_probability->(concept_abscess=>..probability);;
 
-..probability -> [10/100] (*=>nrel_age:concept_all_ages;;*);;
+..probability -> [10] (*=>nrel_age:concept_all_ages;;*);;
 
 
 nrel_attributes->(concept_abscess=>..attributes);;
@@ -17,52 +15,52 @@ nrel_attributes->(concept_abscess=>..attributes);;
 ..attributes
 			->..mass;
 			->..mass2;
-			-|>..calc;
+			->..calc;;
 
 ..mass
 			<-concept_mass;
-			=>nrel_probability:[50/100];
+			=>nrel_probability:[50];
 			=>nrel_shape_of_mass:..shape_round;
 			=>nrel_shape_of_mass:..shape_oval;
-			=>nrel_dens_type:..dens;
+			=>nrel_mass_density:..dens;
 			=>nrel_margins_of_mass: ..margins_c;
 			=>nrel_margins_of_mass: ..margins_m;
 			=>nrel_margins_of_mass: ..margins_o;
 			=>nrel_margins_of_mass: ..margins_i;
 			=>nrel_margins_of_mass: ..margins_s;
-			=>nrel_artifact_size: [> 100](*=>nrel_probability:[100/100];;*);;
+			=>nrel_artifact_size: [>100](*=>nrel_probability:[100];;*);;
 
 ..shape_round
 			<-concept_round;
-			=>nrel_probability:[50/100];;
+			=>nrel_probability:[50];;
 
 ..shape_oval
 			<-concept_oval;
-			=>nrel_probability:[50/100];;
+			=>nrel_probability:[50];;
 
-..nrel_dens_type
+..dens
 			<-concept_high;
-			=>nrel_probability:[100/100];;
+			=>nrel_probability:[100];;
 
 ..margins_c
 			<-concept_circumscribed;
-			=>nrel_probability:[20/100];;
+			=>nrel_probability:[20];;
 
 ..margins_m
 			<-concept_microlobulated;
-			=>nrel_probability:[20/100];;
+			=>nrel_probability:[20];;
 
 ..margins_o
 			<-concept_obscured;
-			=>nrel_probability:[20/100];;
+			=>nrel_probability:[20];;
 
 ..margins_i
 			<-concept_indistinct;
-			=>nrel_probability:[20/100];;
+			=>nrel_probability:[20];;
 
 ..margins_s
 			<-concept_spiculated;
-			=>nrel_probability:[20/100];;
+			=>nrel_probability:[20];;
 
 
 
@@ -71,27 +69,28 @@ nrel_attributes->(concept_abscess=>..attributes);;
 
 ..mass2
 			<-concept_mass;
-			=>nrel_probability:[50/100];
+			=>nrel_probability:[50];
 			=>nrel_shape_of_mass:..shape_irregular;
-			=>nrel_dens_type:..dens_h;
+			=>nrel_mass_density:..dens_h;
 			=>nrel_margins_of_mass: ..margins_indistinct;
-			=>nrel_artifact_size: [> 100](*=>nrel_probability:[100/100];;*);;
+			=>nrel_artifact_size: [>100](*=>nrel_probability:[100];;*);;
 
 
 
 ..shape_irregular
 			<-concept_irregular;
-			=>nrel_probability:[100/100];;
+			=>nrel_probability:[100];;
 
 ..dens_h
 			<-concept_high;
-			=>nrel_probability:[100/100];;
+			=>nrel_probability:[100];;
 
 ..margins_indistinct
-		<-concept_indistinct;;
+			<-concept_indistinct;
+			=>nrel_probability:[100];;
 
 
 
 ..calc
 		<-concept_calc;
-		=>nrel_probability:[100/100];;
+		=>nrel_probability:[0];;

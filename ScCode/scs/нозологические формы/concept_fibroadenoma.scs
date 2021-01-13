@@ -1,0 +1,78 @@
+concept_fibroadenoma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[фиброаденома] (*<-lang_ru;;*);
+		[fibroadenoma] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_fibroadenoma=>..probability1);;
+..probability1 -> [1] (*=>nrel_age:concept_0_19;;*);;
+
+nrel_probability->(concept_fibroadenoma=>..probability2);;
+..probability2 -> [2] (*=>nrel_age:concept_20_29;;*);;
+
+
+nrel_probability->(concept_fibroadenoma=>..probability3);;
+..probability3 -> [3] (*=>nrel_age:concept_30_39;;*);;
+
+
+nrel_probability->(concept_fibroadenoma=>..probability4);;
+..probability4 -> [4] (*=>nrel_age:concept_40_49;;*);;
+
+
+nrel_probability->(concept_fibroadenoma=>..probability30);;
+..probability30 -> [30] (*=>nrel_age:concept_50_59;;*);;
+
+
+nrel_probability->(concept_fibroadenoma=>..probability60);;
+..probability60 -> [60] (*=>nrel_age:concept_60_69;;*);;
+
+
+
+nrel_attributes->(concept_fibroadenoma=>..attributes);;
+
+..attributes
+			->..mass;
+		
+			->..calc;;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_mass_density:..dens;
+			=>nrel_mass_density:..dens1;
+			=>nrel_margins_of_mass: ..margins;
+			=>nrel_artifact_size: [>0](*=>nrel_probability:[100];;*);;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[50];;
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[50];;
+
+..dens
+			<-concept_high;
+			=>nrel_probability:[30];;
+..dens1
+			<-concept_equal;
+			=>nrel_probability:[70];;
+
+..margins
+			<-concept_circumscribed;
+			=>nrel_probability:[100];;
+
+
+
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[80];
+		=>nrel_benign_type:..dist;;
+..dist
+			<-concept_popcorn;
+			=>nrel_probability:[100];;
+
