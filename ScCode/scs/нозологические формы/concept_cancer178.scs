@@ -1,8 +1,8 @@
 concept_cancer178
 <-sc_node_not_relation;
 =>nrel_main_idtf:
-	[рак 178] (*<-lang_ru;;*);
-		[cancer] (*<-lang_en;;*);
+	[инвазивный папиллярный рак] (*<-lang_ru;;*);
+		[invasive papillary cancer] (*<-lang_en;;*);
 		<-concept_suspicious_nosological_form;;
 
 nrel_probability->(concept_cancer178=>..probability1);;
