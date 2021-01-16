@@ -31,7 +31,7 @@ nrel_probability->(concept_tabular_adenoma=>..probability60);;
 nrel_attributes->(concept_tabular_adenoma=>..attributes);;
 
 ..attributes
-			->..mass;
+			->..mass;;
 		
 
 ..mass

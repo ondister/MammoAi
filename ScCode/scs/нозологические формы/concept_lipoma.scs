@@ -11,7 +11,7 @@ nrel_probability->(concept_lipoma=>..probability1);;
 nrel_attributes->(concept_lipoma=>..attributes);;
 
 ..attributes
-			->..mass;
+			->..mass;;
 		
 
 ..mass
