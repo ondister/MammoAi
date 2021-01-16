@@ -1,0 +1,38 @@
+concept_lipoma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[липома] (*<-lang_ru;;*);
+		[lipoma] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_lipoma=>..probability1);;
+..probability1 -> [1] (*=>nrel_age:concept_all_ages;;*);;
+
+nrel_attributes->(concept_lipoma=>..attributes);;
+
+..attributes
+			->..mass;
+		
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_mass_density:..dens;
+			=>nrel_margins_of_mass: ..margins;
+			=>nrel_artifact_size: [>5](*=>nrel_probability:[100];;*);;
+
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[100];;
+
+..dens
+			<-concept_low;
+			=>nrel_probability:[100];;
+
+..margins
+			<-concept_circumscribed;
+			=>nrel_probability:[100];;
+
+

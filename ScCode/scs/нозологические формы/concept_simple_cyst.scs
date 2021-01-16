@@ -1,0 +1,48 @@
+concept_simple_cyst
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[простая киста] (*<-lang_ru;;*);
+		[simple cyst] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_simple_cyst=>..probability1);;
+..probability1 -> [80] (*=>nrel_age:concept_all_ages;;*);;
+
+nrel_attributes->(concept_simple_cyst=>..attributes);;
+
+..attributes
+			->..mass;
+		
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_mass_density:..dens;
+			=>nrel_mass_density:..dens1;
+			=>nrel_margins_of_mass: ..margins;
+			=>nrel_artifact_size: [>5](*=>nrel_probability:[100];;*);;
+
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[50];;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[50];;
+
+..dens
+			<-concept_equal;
+			=>nrel_probability:[50];;
+
+..dens1
+			<-concept_high;
+			=>nrel_probability:[50];;
+
+..margins
+			<-concept_circumscribed;
+			=>nrel_probability:[100];;
+
+
