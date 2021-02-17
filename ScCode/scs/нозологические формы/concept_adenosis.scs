@@ -1,0 +1,38 @@
+concept_adenosis
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[абсцесс] (*<-lang_ru;;*);
+		[adenosis] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_adenosis=>..probability);;
+
+..probability -> [10] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_adenosis=>..attributes);;
+
+..attributes
+			->..calcb1;
+			->..calc;;
+
+..calc
+		<-concept_calc;
+		=>nrel_calc_distribution:..grouped;
+		=>nrel_suspicious_type:..sus;
+		=>nrel_probability:[50];;
+..sus 
+		<-concept_amorphous;
+		=>nrel_probability:[100];;
+..grouped 
+		<-concept_grouped;
+		=>nrel_probability:[100];;
+
+..calcb1
+		<-concept_calc;
+		=>nrel_probability:[50];
+		=>nrel_benign_type:..dist;;
+..dist
+			<-concept_milk;
+			=>nrel_probability:[100];;
+

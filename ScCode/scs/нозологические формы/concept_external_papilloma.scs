@@ -1,0 +1,22 @@
+concept_external_papilloma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[наружная папиллома] (*<-lang_ru;;*);
+		[external papilloma] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_external_papilloma=>..probability);;
+
+..probability -> [80] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_external_papilloma=>..attributes);;
+
+..attributes
+			->..pap;;
+
+..pap
+			<-concept_skin_papilloma;
+			=>nrel_probability:[100];;
+			
+

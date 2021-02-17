@@ -1,0 +1,70 @@
+concept_mixoid_fibroadenoma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[миксоидная фиброаденома] (*<-lang_ru;;*);
+		[mixoid fibroadenoma] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability1);;
+..probability1 -> [5] (*=>nrel_age:concept_0_19;;*);;
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability2);;
+..probability2 -> [15] (*=>nrel_age:concept_20_29;;*);;
+
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability3);;
+..probability3 -> [25] (*=>nrel_age:concept_30_39;;*);;
+
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability4);;
+..probability4 -> [35] (*=>nrel_age:concept_40_49;;*);;
+
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability30);;
+..probability30 -> [15] (*=>nrel_age:concept_50_59;;*);;
+
+
+nrel_probability->(concept_mixoid_fibroadenoma=>..probability60);;
+..probability60 -> [5] (*=>nrel_age:concept_60_69;;*);;
+
+
+nrel_attributes->(concept_mixoid_fibroadenoma=>..attributes);;
+
+..attributes
+			->..mass;
+			->..calc;;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_mass_density:..dens;
+			=>nrel_margins_of_mass: ..margins_c;
+			=>nrel_artifact_size: [>100](*=>nrel_probability:[100];;*);;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[50];;
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[50];;
+
+..dens
+			<-concept_high;
+			=>nrel_probability:[15];;
+..dens
+			<-concept_low;
+			=>nrel_probability:[15];;
+..dens
+			<-concept_equal;
+			=>nrel_probability:[70];;
+
+..margins_c
+			<-concept_circumscribed;
+			=>nrel_probability:[100];;
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[0];;

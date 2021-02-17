@@ -4,6 +4,18 @@ nrel_age
 		[возраст*] (*<-lang_ru;;*);
     	[age*] (*<-lang_en;;*);;
 
+nrel_benign_type
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[доброкачественный тип*] (*<-lang_ru;;*);
+    	[benign type*] (*<-lang_en;;*);;
+
+nrel_suspicious_type
+	<-sc_node_norole_relation;
+	=>nrel_main_idtf:
+		[злокачественный тип*] (*<-lang_ru;;*);
+    	[suspicious type*] (*<-lang_en;;*);;
+
 nrel_patient_hormonal_status
 	<-sc_node_norole_relation;
 	=>nrel_main_idtf:

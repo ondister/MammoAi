@@ -1,0 +1,33 @@
+concept_plasma_cell_mastitis
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[плазмоклеточный мастит] (*<-lang_ru;;*);
+		[plasma cell mastitis] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_plasma_cell_mastitis=>..probability);;
+
+..probability -> [10] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_plasma_cell_mastitis=>..attributes);;
+
+..attributes
+			->..calc;;
+
+
+..calc
+		<-concept_calc;
+		=>nrel_calc_distribution:..dist;
+		=>nrel_benign_type:..beni;
+		=>nrel_probability:[100];;
+
+..dist
+			<-concept_linear;
+			=>nrel_probability:[100];;
+
+
+..beni
+			<-concept_rodlike;
+			=>nrel_probability:[100];;
+

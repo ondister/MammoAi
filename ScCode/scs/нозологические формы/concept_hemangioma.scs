@@ -1,0 +1,58 @@
+concept_hemangioma
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[гемангиома] (*<-lang_ru;;*);
+		[hemangioma] (*<-lang_en;;*);
+		<-concept_benign_nosological_form;;
+
+nrel_probability->(concept_hemangioma=>..probability);;
+
+..probability -> [2] (*=>nrel_age:concept_all_ages;;*);;
+
+
+nrel_attributes->(concept_hemangioma=>..attributes);;
+
+..attributes
+			->..mass;
+			->..calc;;
+
+..mass
+			<-concept_mass;
+			=>nrel_probability:[100];
+			=>nrel_shape_of_mass:..shape_round;
+			=>nrel_shape_of_mass:..shape_oval;
+			=>nrel_shape_of_mass:..shape_i;
+			=>nrel_mass_density:..dens;
+			=>nrel_margins_of_mass: ..margins_c;
+			=>nrel_margins_of_mass: ..margins_i;
+			=>nrel_artifact_size: [>100](*=>nrel_probability:[100];;*);;
+
+..shape_round
+			<-concept_round;
+			=>nrel_probability:[80];;
+
+..shape_oval
+			<-concept_oval;
+			=>nrel_probability:[10];;
+
+..shape_i
+			<-concept_irregular;
+			=>nrel_probability:[10];;
+
+
+..dens
+			<-concept_high;
+			=>nrel_probability:[100];;
+
+..margins_c
+			<-concept_circumscribed;
+			=>nrel_probability:[50];;
+
+..margins_i
+			<-concept_indistinct;
+			=>nrel_probability:[50];;
+
+
+..calc
+		<-concept_calc;
+		=>nrel_probability:[0];;
